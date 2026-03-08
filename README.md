@@ -1,5 +1,74 @@
 # TP 2 - Entités Salle et Utilisateur avec Hibernate
+1. Introduction
+
+Ce projet a pour objectif de créer une application Java utilisant JPA (Java Persistence API) avec Hibernate comme implémentation afin de gérer des entités dans une base de données.
+La base de données utilisée est H2, une base de données embarquée en mémoire, et la gestion du projet est faite avec Maven.
+
+L'application permet de réaliser les opérations CRUD (Create, Read, Update, Delete) sur deux entités principales :
+
+Utilisateur
+
+Salle
+3. Configuration des dépendances Maven
+
+Les dépendances suivantes ont été ajoutées dans le fichier pom.xml :
+
+JPA API : gestion de la persistance
+
+Hibernate Core : implémentation de JPA
+
+Hibernate Validator : validation des données
+
+H2 Database : base de données en mémoire
+
+SLF4J : gestion des logs
+
+JUnit : tests unitaires
+4. Configuration de Hibernate et H2
+
+Un fichier persistence.xml a été créé dans :
+
+src/main/resources/META-INF
+
+Ce fichier contient :
+
+la configuration de la connexion H2
+
+le dialecte Hibernate
+
+la génération automatique des tables
+
+l’affichage des requêtes SQL
+5. Création des entités
+
+Deux entités principales ont été créées :
+
+Entité Utilisateur
+
+Elle représente les utilisateurs du système.
 <img width="1920" height="988" alt="Capture d&#39;écran 2026-02-25 095908" src="https://github.com/user-attachments/assets/bac49700-1b0c-42ab-9f6a-a29fa724f01f" />
+Tests unitaires
+
+Des tests ont été réalisés avec JUnit :
+
+UtilisateurServiceTest
+
+Tests effectués :
+
+CRUD complet
+
+recherche par email
+
+récupération de tous les utilisateurs
+SalleServiceTest
+
+Tests effectués :
+
+CRUD complet
+
+recherche par disponibilité
+
+recherche par capacité minimale
 <img width="1920" height="1005" alt="Capture d&#39;écran 2026-02-25 095929" src="https://github.com/user-attachments/assets/e223a5fd-3710-492e-aca8-05b4f69860e2" />
 <img width="1920" height="990" alt="Capture d&#39;écran 2026-02-25 095938" src="https://github.com/user-attachments/assets/56d7db31-405c-4804-afa5-49299863c3d2" />
 <img width="1920" height="978" alt="Capture d&#39;écran 2026-02-25 095947" src="https://github.com/user-attachments/assets/043d260b-2926-4a0b-ab1f-25dba7739df2" />
